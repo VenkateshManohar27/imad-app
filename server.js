@@ -42,7 +42,7 @@ var createTemplate = function(data){
   var heading = data.heading;
   var date = data.date;
   var content= data.content;
-  return `<html>
+  var htmlTemplate =  `<html>
     <head>
         <meta name ="view-port" content="width=device-width, initial-scale=1"/>
         <title>
@@ -67,7 +67,8 @@ var createTemplate = function(data){
             </div>
         </div>
     </body>
-</html> `;  
+</html> `; 
+return htmlTemplate;
 };
 
 app.get('/', function (req, res) {
