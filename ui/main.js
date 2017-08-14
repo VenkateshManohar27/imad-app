@@ -24,6 +24,12 @@ buttonEle.onclick = function(){
     request.send(null);
 };
 
+var submitBtn = document.getElementById('submit_btn');
+submitBtn.onclick=function(){
+    var nameList =['Name 1','Name 2','Name 3'];
+    
+    
+}
 
 /*var element = document.getElementById('madi');
 
