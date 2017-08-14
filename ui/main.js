@@ -35,6 +35,7 @@ submitBtn.onclick=function(){
         if(request.readyState === XMLHttpRequest.DONE){
             if(request.state===200){
                 nameList = request.responseText;
+                nameList = JSON.parse(nameList);
                 var list = document.getElementById('nameList');
     var finalStr="";
     for(var i=0;i<nameList.length;i++){
