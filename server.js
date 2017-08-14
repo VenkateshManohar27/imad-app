@@ -82,6 +82,13 @@ app.get('/counter',function (req, res){
     res.send(counter.toString());
 });
 
+var nameList =[];
+app.get('/submit-btn', function (req,res){
+    var name = req.query.name;
+    nameList.push(name);
+    res.send(JSON.stringify(nameList));
+});
+
 app.get('/:articlepar', function(req,res){
     
     var articleObj = req.params.articlepar;
