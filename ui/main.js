@@ -1,5 +1,4 @@
 console.log('Loaded!');
-alert('Hello Users');
 var element = document.getElementById('madi');
 
 var marginLeft = 0;
