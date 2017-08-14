@@ -4,9 +4,26 @@ console.log('Loaded!');
 var buttonEle = document.getElementById('counter');
 var counter = 0;
 buttonEle.onclick = function(){
-    counter = counter+1;
-    var span = document.getElementById('count');
-    span.innerHTML = counter;
+    
+    //Create a request Object
+    var request = new XMLHttpRequest();
+    
+    request.onreadystatechange = function(){
+        if(request.readyState=== XMLHttpRequest.DONE){
+            if(request.status ===200){
+                counter = request.responseText;
+                var span = document.getElementById('count');
+                span.innerHTML = counter;
+    
+            }
+        }
+    };
+    
+    request.open('GET',"http://venkateshmanohar.imad.hasura-app.io/counter");
+    
+    
+    
+    
     
 }
 
