@@ -27,6 +27,8 @@ buttonEle.onclick = function(){
 var submitBtn = document.getElementById('submit_btn');
 
 submitBtn.onclick=function(){
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
     var request = new XMLHttpRequest();
     var nameList =[];
     request.onreadystatechange = function(){
@@ -43,7 +45,7 @@ submitBtn.onclick=function(){
         }
     }
     
-    request.open('GET',"http://venkateshmanohar.imad.hasura-app.io/submit-btn", true)
+    request.open('GET',"http://venkateshmanohar.imad.hasura-app.io/submit-btn?name"+name, true)
     request.send(null);
     
 };
