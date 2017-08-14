@@ -25,7 +25,34 @@ buttonEle.onclick = function(){
 };
 
 var submitBtn = document.getElementById('submit_btn');
+
 submitBtn.onclick=function(){
+    var request = new XMLHttpRequest();
+    var nameList =[];
+    request.onreadystatechange = function(){
+        if(request.readyState === XMLHttpRequest.DONE){
+            if(request.state===200){
+                nameList = request.responseText;
+                var list = document.getElementById('nameList');
+    var finalStr="";
+    for(var i=0;i<nameList.length;i++){
+        finalStr +="<li>"+nameList[i]+"</li>";
+    }
+    list.innerHTML=finalStr;
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+/*submitBtn.onclick=function(){
     var nameList =['Name 1','Name 2','Name 3'];
     
     var list = document.getElementById('nameList');
@@ -34,7 +61,7 @@ submitBtn.onclick=function(){
         finalStr +="<li>"+nameList[i]+"</li>";
     }
     list.innerHTML=finalStr;
-}
+}*/
 
 /*var element = document.getElementById('madi');
 
