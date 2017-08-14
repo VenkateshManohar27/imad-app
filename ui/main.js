@@ -45,7 +45,7 @@ submitBtn.onclick=function(){
         }
     }
     
-    request.open('GET',"http://venkateshmanohar.imad.hasura-app.io/submit-btn?name"+name, true)
+    request.open('GET',"http://venkateshmanohar.imad.hasura-app.io/submit-btn?name="+name, true)
     request.send(null);
     
 };
