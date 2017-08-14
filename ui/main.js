@@ -37,14 +37,14 @@ submitBtn.onclick=function(){
                 var nameList = request.responseText;
                 nameList = JSON.parse(nameList);
                 var list = document.getElementById('nameList');
-    var finalStr="";
-    for(var i=0;i<nameList.length;i++){
-        finalStr +="<li>"+nameList[i]+"</li>";
-    }
-    list.innerHTML=finalStr;
+                var finalStr="";
+                for(var i=0;i<nameList.length;i++){
+                    finalStr +="<li>"+nameList[i]+"</li>";
+                }
+                list.innerHTML=finalStr;
             }
         }
-    }
+    };
     
     request.open('GET',"http://venkateshmanohar.imad.hasura-app.io/submit-btn?name="+name, true)
     request.send(null);
