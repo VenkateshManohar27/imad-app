@@ -19,13 +19,10 @@ buttonEle.onclick = function(){
         }
     };
     
-    request.open('GET',"http://venkateshmanohar.imad.hasura-app.io/counter");
+    request.open('GET',"http://venkateshmanohar.imad.hasura-app.io/counter", true);
     
-    
-    
-    
-    
-}
+    request.send(null);
+};
 
 
 /*var element = document.getElementById('madi');
