@@ -30,11 +30,11 @@ submitBtn.onclick=function(){
     var nameInput = document.getElementById('name');
     var name = nameInput.value;
     var request = new XMLHttpRequest();
-    var nameList =[];
+   
     request.onreadystatechange = function(){
         if(request.readyState === XMLHttpRequest.DONE){
             if(request.state===200){
-                nameList = request.responseText;
+                var nameList = request.responseText;
                 nameList = JSON.parse(nameList);
                 var list = document.getElementById('nameList');
     var finalStr="";
