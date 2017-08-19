@@ -140,7 +140,7 @@ app.post('/login', function(req,res){
                 }
                 
             }
-            res.send('User  successfully created: '+ username);
+         
         }
     });
    
