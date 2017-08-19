@@ -130,7 +130,7 @@ app.post('/login', function(req,res){
                 res.status(403).send('username/password is invalid');
             }else{
                 var dbpwd = result.rows[0].password;
-                var salt = dbpwd.split('$')[2];
+                var salt = dbpwd.split('$')[1];
                 console.log('salt is:'+salt);
                 var hashpwd = hash(password, salt);
                 if(hashpwd === dbpwd){
