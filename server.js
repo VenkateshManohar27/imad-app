@@ -136,7 +136,7 @@ app.post('/login', function(req,res){
                 if(hashpwd === dbpwd){
                     res.send('Credentials are valid');
                 }else{
-                    res.send('Credentials are invalid');
+                    res.status(403).send('Credentials are invalid');
                 }
                 
             }
