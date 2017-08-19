@@ -111,7 +111,7 @@ app.get('/submit-btn', function (req,res){
 app.get('/articles/:articlepar', function(req,res){
     
     var articleId = req.params.articlepar;
-    pool.query('SELECT * FROM ARTICLE WHERE ID='+articleId,  function(err, result){
+    pool.query('SELECT * FROM ARTICLE WHERE ID=$1',[articleId],  function(err, result){
          if(err){
             res.status(500).send(err.toString());
         } else {
