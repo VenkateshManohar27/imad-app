@@ -133,7 +133,7 @@ app.post('/login', function(req,res){
                 var salt = dbpwd.split('$')[2];
                 
                 var hashpwd = hash(password, salt);
-                if(hashpwd ===dbpwd){
+                if(hashpwd === dbpwd){
                     res.send('Credentials are valid');
                 }else{
                     res.send('Credentials are invalid');
