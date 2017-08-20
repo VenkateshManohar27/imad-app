@@ -144,6 +144,7 @@ app.post('/login', function(req,res){
                 if(hashpwd === dbpwd){
                     
                     req.session.auth ={userId: result.rows[0].id};
+                    console.log('UserId of the session created:'+req.session.auth.userId);
                     res.send('Credentials are valid');
                 }else{
                     res.status(403).send('Credentials are invalid');
