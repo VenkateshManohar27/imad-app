@@ -21,7 +21,7 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(session({
     secret:'SomeRamdomSecret',
-    Cookie:{maxAge:1000*60*60*24*30}
+    cookie:{maxAge:1000*60*60*24*30}
 }));
 var articleObject ={
     articleOne:
