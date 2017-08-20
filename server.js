@@ -161,9 +161,9 @@ app.get('logout', function (req,res){
 });
 
 app.get('/check-login', function(req, res){
-    console.log(req.session);
-    console.log(req.session.auth);
-    console.log(req.session.auth.userId);
+    console.log('Sesssion:'+req.session);
+    console.log('Auth:'+req.session.auth);
+    console.log('UserId:'+req.session.auth.userId);
     if(req.session && req.session.auth && req.session.auth.userId){
         res.send('You are logged in : '+req.session.auth.userId.toString());
     }else{
